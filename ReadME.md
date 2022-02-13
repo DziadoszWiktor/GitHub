@@ -5,29 +5,35 @@ Git is defined as a Version Control System
 Is the way where Programmers track their code changes, documents and other collections of information
 ## **3.** What is a Git Repository?
 Is the "folder" where our projects are contained
-## **4.** Git Repo cloning
+## **4.** Git Setup
+
+    git config --global user.name "name"
+    git config --global user.email "mail"
+    git config color.ui auto (for ui color)
+    git config -l (to view all config)
+## **5.** Git Repo cloning
 
     git clone https://github.com/username/repo
-## **5.** Tracking changes
+## **6.** Tracking changes
 
     git status
-## **6.** Adding files
+## **7.** Adding files
 "-A" parameter stands for All, we can specify single files "example.txt"
 
     git add -A
-## **7.** Commiting changes
+## **8.** Commiting changes
 "-am" stands for all and comment, in the brackets we can add a comment
 
     git commit -am "comment"
-## **8.** SSH keys
+## **9.** SSH keys
 Generating a local key (default file: user/.ssh/id_rsa)
 
     ssh-keygen -t rsa -b 4096 -C "email@example.com"
 We generate 2 keys, private one and public one, the public is needed by github repo settings
-## **5.** Publishing the Repo changes on GitHub
+## **10.** Publishing the Repo changes on GitHub
 
     git push (origin master)
-## **5.** Starting a repo locally
+## **11.** Starting a repo locally
 
     git init
     *adding file, commiting, but we cannto push*
@@ -35,21 +41,33 @@ We generate 2 keys, private one and public one, the public is needed by github r
     git remote add origin *link for repo*
     git remote -v (shows any remote repos)
     git push (-u for setting default origin master)(origin master)
-## **5.** Git branching
+## **12.** Git branching
 Master is our default branch
 ![screen1](./screens/screen1.JPG)
-Check branches
+Check branches (we must push all almost one time)
 
     git branch
 Creating new branch
 
     git checkout -b *branchname*
+Changing branch
 
+    git checkout *branch name*
+View the difference between branches 
 
-## **5.** What Git is?
+    git diff *name of branch*
+Push changes on the new branch
 
-## **5.** What Git is?
+    git push --set-upstream (-u) origin branch1
+I can delete branches
 
-## **5.** What Git is?
+    git checkout -d *branchname*
+Undo changes (1 commit back)
+
+    git reset HEAD~1
+We can see the changes log
+
+    git log
+
 
 
